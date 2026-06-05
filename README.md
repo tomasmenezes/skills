@@ -1,6 +1,6 @@
 # Agent Skills
 
-My custom agent skills.
+Some custom agent skills that I find useful.
 
 ## Install
 
