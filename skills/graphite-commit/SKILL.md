@@ -101,7 +101,7 @@ Analyze the staged diff and choose:
 - **Type**: the kind of change.
 - **Scope**: the smallest useful area, module, package, feature, or subsystem; optional but encouraged.
 - **Description**: imperative, present tense, under 72 characters when practical.
-- **Body**: when the PR or commit needs context not obvious from the diff.
+- **Body**: prefer one even for small changes; keep it brief when context is simple.
 - **Footer**: issue references or breaking-change metadata.
 
 Examples:
@@ -153,7 +153,7 @@ docs: update release checklist
 - Use imperative mood: `add`, not `adds` or `added`.
 - Keep the description specific and compact.
 - Do not end the description with a period.
-- Use a body for important rationale, tradeoffs, migrations, or behavior changes.
+- Prefer a body even for small changes; briefly record rationale, tradeoffs, migrations, validation, behavior changes, or why it belongs in this branch/PR.
 - Reference issues in the footer when relevant: `Closes #123`, `Refs #456`.
 
 ### Breaking Changes
@@ -369,7 +369,7 @@ Use the repository's configured trunk if it is not `main`, then submit:
 gt submit --stack --no-edit --no-interactive
 ```
 
-Use `--dry-run` first when you need to verify what Graphite would submit:
+Use `--dry-run` when unsure what Graphite will submit, stack shape is ambiguous, or confirmation is required:
 
 ```bash
 gt submit --stack --dry-run --no-edit --no-interactive
