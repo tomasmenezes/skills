@@ -1,5 +1,7 @@
 # Agent Skills
 
+[![skills.sh](https://skills.sh/b/tomasmenezes/skills)](https://skills.sh/tomasmenezes/skills)
+
 Some custom agent skills that I find useful.
 
 ## Install
