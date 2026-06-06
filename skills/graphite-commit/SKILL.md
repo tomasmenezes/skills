@@ -50,8 +50,8 @@ Use this skill to turn local changes into well-scoped conventional commits insid
 | Rebase stack                       | `gt restack`                                                                   |
 | Track or re-parent a branch        | `gt track --parent <branch>`                                                   |
 | Submit the full stack              | `gt submit --stack --no-edit --no-interactive`                                 |
-| Mark current PR ready and merge    | `gt submit --no-stack --publish --merge-when-ready --no-edit --no-interactive` |
-| Mark full stack ready and merge    | `gt submit --stack --publish --merge-when-ready --no-edit --no-interactive`    |
+| Merge current PR when ready        | `gt submit --no-stack --publish --merge-when-ready --no-edit --no-interactive` |
+| Merge full stack when ready        | `gt submit --stack --publish --merge-when-ready --no-edit --no-interactive`    |
 | Edit a PR body                     | `gh pr edit <PR_NUMBER> --body-file /tmp/pr-body.md`                           |
 
 ## Commit Analysis Workflow
@@ -397,7 +397,7 @@ Avoid shell heredocs for PR descriptions because Markdown tables, code fences, a
 
 #### First PR (trunk-facing)
 
-The first PR in the stack owns the stack description. Write it when the first PR is created; update it when the stack is marked ready to merge or when merging. Graphite auto-comments individual PR links, so no need to list them manually.
+The first PR in the stack owns the stack description. Write it when the first PR is created; update it before using --merge-when-ready or merging. Graphite auto-comments individual PR links, so no need to list them manually.
 
 ```markdown
 ## Stack
@@ -429,7 +429,7 @@ Support needs structured context to diagnose failed login attempts.
 
 #### Updating the stack description
 
-When the stack is marked ready to merge or when merging, revisit the first PR's description and update it to reflect the final scope — any PRs dropped, added, or significantly changed since creation.
+Before using --merge-when-ready or merging, revisit the first PR's description and update it to reflect the final scope — any PRs dropped, added, or significantly changed since creation.
 
 ## Troubleshooting And Recovery
 
