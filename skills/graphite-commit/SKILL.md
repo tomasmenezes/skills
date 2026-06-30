@@ -397,7 +397,7 @@ Avoid shell heredocs for PR descriptions because Markdown tables, code fences, a
 
 #### First PR (trunk-facing)
 
-The first PR in the stack owns the stack description. Write it when the first PR is created; update it before using --merge-when-ready or merging. Graphite auto-comments individual PR links, so no need to list them manually.
+The trunk-facing PR owns the stack description. Identify it with `gt bottom && gt branch info` (or non-mutating: `gt log --stack --reverse`, then `gt branch info <first-branch-above-trunk>`). Do not infer it from the current work segment. Write this description when the first PR is created; update it before using --merge-when-ready or merging. Graphite auto-comments individual PR links, so no need to list them manually.
 
 ```markdown
 ## Stack
